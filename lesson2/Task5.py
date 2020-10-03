@@ -7,11 +7,7 @@ while True:
         break
     new_value = int(command)
     if raiting.count(new_value):
-        raiting.reverse()
-        i = raiting.index(new_value)
-        raiting.reverse()
-        new_index = len(raiting) - i
-        raiting.insert(new_index, new_value)
+        raiting.insert(raiting.index(new_value) + raiting.count(new_value), new_value)
     elif new_value > max(raiting):
         raiting.insert(0, new_value)
     elif new_value < min(raiting):
