@@ -15,7 +15,7 @@ while True:
     print(f'Current sum: {summ}')
     command = input('Type numbers (or symbol \'q\' for stop typing): ')
     summ += sum_numbers(command)
-    if command.count('q'):
+    if command.lower().count('q'):
         break
 
 print(f'Total sum {summ}')
